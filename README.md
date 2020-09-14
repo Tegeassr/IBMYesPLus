@@ -129,6 +129,8 @@ PS：已经安装的不受影响，可以忽略，此脚本只针对新安装的
     }
     )
     ~~~
+    
+    为了自选ip，已除去websocket路径
 
     需要修改url.hostname和url.pathname，get后返回Bad Request
 
