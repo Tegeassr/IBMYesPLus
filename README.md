@@ -54,7 +54,7 @@ PS：已经安装的不受影响，可以忽略，此脚本只针对新安装的
 1. 运行一键伪装代码，按照提示输入以下参数
 
     ~~~
-    wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/w2r/IBMYesPlus/master/install.sh && chmod +x install.sh  && ./install.sh
+    wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/Tegeassr/IBMYesPlus/master/install.sh && chmod +x install.sh  && ./install.sh
     
     # 安装步骤
     用户名称—>个人邮箱
