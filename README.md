@@ -55,7 +55,7 @@ PS：已经安装的不受影响，可以忽略，此脚本只针对新安装的
 
     ~~~
     wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/Tegeassr/IBMYesPlus/master/install.sh && chmod +x install.sh  && ./install.sh
-    
+    wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/Tegeassr/IBMYesPlus/master/installeu.sh && chmod +x installeu.sh  && ./installeu.sh
     # 安装步骤
     用户名称—>个人邮箱
     用户密码—>密码
