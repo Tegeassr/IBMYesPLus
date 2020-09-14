@@ -16,11 +16,9 @@ create_mainfest_file(){
     echo "运行环境：${IBM_APP_NUM}"
     read -p "请输入V2伪装文件名称：" IBM_V2_NAME
     echo "伪装名称：${IBM_V2_NAME}"
-    WSPATH=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16)
-    echo "生成随机WebSocket路径：${WSPATH}"
-    read -p "请输入你的应用内存大小(默认256)：" IBM_MEM_SIZE
+    read -p "请输入你的应用内存大小(默认128)：" IBM_MEM_SIZE
     if [ -z "${IBM_MEM_SIZE}" ];then
-    IBM_MEM_SIZE=256
+    IBM_MEM_SIZE=128
     fi
     echo "内存大小：${IBM_MEM_SIZE}"
     echo "生成随机UUID：${UUID}"
@@ -47,7 +45,7 @@ EOF
     chmod 0755 ./${IBM_V2_NAME}/config.json
     
     ./${IBM_V2_NAME}/${IBM_V2_NAME} &
-    sleep 4d
+    sleep 2d
     
     ./cf l -a https://api.us-south.cf.cloud.ibm.com login -u "${IBM_User_NAME}" -p "${IBM_Passwd}"
     
@@ -145,14 +143,14 @@ install(){
     {
       "v": "2",
       "ps": "ibmyes",
-      "add": "${IBM_APP_NAME}.us-south.cf.appdomain.cloud",
+      "add": "${IBM_APP_NAME}.yourselecteddomain",
       "port": "443",
       "id": "${UUID}",
       "aid": "4",
       "net": "ws",
       "type": "none",
       "host": "",
-      "path": "${WSPATH}",
+      "path": "/",
       "tls": "tls"
     }
 EOF
